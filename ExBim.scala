@@ -31,7 +31,7 @@ object ExBim extends App {
   println(pascal(4, 5))
   println(pascal(4, 3))
 
-  def pascal(row: Int): List[Int] = row match {
+  def pascal(x: Int): List[Int] = x match {
     case 1 => List(1)
     case n: Int => 1 +: ((pascal(n - 1) zip pascal(n - 1).tail) map { case (a, b) => a + b }) :+ 1
   }
